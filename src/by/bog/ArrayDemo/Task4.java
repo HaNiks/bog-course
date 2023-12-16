@@ -1,8 +1,7 @@
-package ArraYs;
-
+package by.bog.ArrayDemo;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.StringTokenizer;
+
 
 /* Создать пустой массив чисел. В цикле заполнять массив до тех пор, пока е закончиться место
  * либо пока не введем строку. после этого вывести массив */
@@ -23,4 +22,3 @@ public class Task4 {
         System.out.println(Arrays.toString(array));
     }
 }
-
