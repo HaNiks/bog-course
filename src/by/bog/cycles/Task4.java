@@ -1,4 +1,4 @@
-package cycles;
+package by.bog.cycles;
 /* Задача 4
 Есть строка (str)
 Пользователь вводит строку (inputStr)

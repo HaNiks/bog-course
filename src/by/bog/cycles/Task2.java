@@ -1,4 +1,4 @@
-package cycles;
+package by.bog.cycles;
 
 import java.util.Scanner;
 

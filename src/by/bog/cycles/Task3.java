@@ -1,4 +1,4 @@
-package cycles;
+package by.bog.cycles;
 /*  Задача 3
 Есть целое число (num)
 Пользователь вводит строку
