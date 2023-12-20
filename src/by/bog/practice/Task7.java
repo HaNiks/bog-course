@@ -6,7 +6,7 @@ package by.bog.practice;
 public class Task7 {
     public static void main(String[] args) {
 
-        int[] array = {5, 10, 11, 44, 11, 32, 25};
+        int[] array = {5, 10, 44, 11, 32, 25};
 
         doFor(array);
         doWhile(array);
@@ -22,7 +22,9 @@ public class Task7 {
             }
             if (array[i] > max2 && array[i] != max) {
                 max2 = array[i];
+
             }
+
         }
         System.out.println("For: " + max + " " + max2);
     }
@@ -34,17 +36,19 @@ public class Task7 {
         int max1 = 0;
         int max2 = 0;
 
-        while (left <= right) {
+        while (left < right) {
             if (array[left] > max1) {
-                max2 = max1;
                 max1 = array[left];
             }
+
             if (array[left] > max2 && array[left] != max1) {
                 max2 = array[left];
+
+                left++;
+                right--;
             }
-            left++;
-            right--;
         }
         System.out.println("While: " + max1 + " " + max2);
     }
 }
+
