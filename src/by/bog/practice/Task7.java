@@ -5,50 +5,64 @@ package by.bog.practice;
 первый вызывай через for и проходя весь массив, а второй через while и с помощью метода двух указателей*/
 public class Task7 {
     public static void main(String[] args) {
+        int[] numbers = {5, 7, 11, 8, 10, 6, 3};
 
-        int[] array = {5, 10, 44, 11, 32, 25};
+        doFor(numbers);
 
-        doFor(array);
-        doWhile(array);
-
+        doWhile(numbers);
+        maxTwoNumber(numbers);
     }
 
-    private static void doFor(int[] array) {
-        int max = 0;
-        int max2 = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > max) {
-                max = array[i];
-            }
-            if (array[i] > max2 && array[i] != max) {
-                max2 = array[i];
 
-            }
-
-        }
-        System.out.println("For: " + max + " " + max2);
-    }
-
-    private static void doWhile(int[] array) {
-
-        int left = 0;
-        int right = array.length - 1;
+    public static void doFor(int[] arr) {
         int max1 = 0;
         int max2 = 0;
 
-        while (left < right) {
-            if (array[left] > max1) {
-                max1 = array[left];
-            }
-
-            if (array[left] > max2 && array[left] != max1) {
-                max2 = array[left];
-
-                left++;
-                right--;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max1) {
+                max2 = max1;
+                max1 = arr[i];
+            } else if (arr[i] >= max2) {
+                max2 = arr[i];
             }
         }
-        System.out.println("While: " + max1 + " " + max2);
+
+        System.out.println("Первое максимальное число: For " + max1);
+        System.out.println("Второе максимальное число: For " + max2);
+    }
+
+
+    public static void doWhile(int[] arr) {
+        int max1 = 0;
+        int max2 = 0;
+        int i = 0;
+
+        while (i < arr.length) {
+            if (arr[i] > max1) {
+                max2 = max1;
+                max1 = arr[i];
+            } else if (arr[i] > max2) {
+                max2 = arr[i];
+            }
+            i++;
+        }
+
+        System.out.println("Первое максимальное число: While " + max1);
+        System.out.println("Второе максимальное число: While " + max2);
+    }
+    private static int[] maxTwoNumber(int[] arr) {
+        int max1 =0;
+        int max2 =0;
+        int i=0;
+        while (i < arr.length) {
+            if (arr[i] > max1) {
+                max2 = max1;
+                max1 = arr[i];
+            } else if (arr[i] > max2) {
+                max2 = arr[i];
+            }
+            i++;
+        }
+        return new  int[] {max1, max2};
     }
 }
-

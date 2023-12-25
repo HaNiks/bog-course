@@ -18,14 +18,14 @@ public class Task2 {
         System.out.println("enter " + n + " string: ");
         for (int i = 0; i < string.length; i++) {
             string[i] = sc.next();
+            if (string[i].length() <= str2.length()) {
+                str2 = string[i];
+                index2 = i;
+            }
             if (string[i].length() > str1.length()) {
                 str1 = string[i];
                 index = i;
-            }
 
-            if (string[i].length() < str2.length()) {
-                str2 = string[i];
-                index2 = i;
             }
 
         }
