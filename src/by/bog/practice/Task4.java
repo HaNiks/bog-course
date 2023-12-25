@@ -31,6 +31,6 @@ public class Task4 {
         } else if (n > 10) {
             System.out.printf("%f>10", n);
         }
-
+        
     }
 }

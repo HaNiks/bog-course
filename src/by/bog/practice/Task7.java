@@ -8,9 +8,9 @@ public class Task7 {
         int[] numbers = {5, 7, 11, 8, 10, 6, 3};
 
         doFor(numbers);
-
+        updateMaxValues(1, 3, 4);
         doWhile(numbers);
-        maxTwoNumber(numbers);
+
     }
 
 
@@ -27,8 +27,7 @@ public class Task7 {
             }
         }
 
-        System.out.println("Первое максимальное число: For " + max1);
-        System.out.println("Второе максимальное число: For " + max2);
+        System.out.println(" максимальное число: For " + max1 + " " + max2);
     }
 
 
@@ -47,22 +46,17 @@ public class Task7 {
             i++;
         }
 
-        System.out.println("Первое максимальное число: While " + max1);
-        System.out.println("Второе максимальное число: While " + max2);
+        System.out.println(" максимальное число: While " + max1 + " " + max2);
+
     }
-    private static int[] maxTwoNumber(int[] arr) {
-        int max1 =0;
-        int max2 =0;
-        int i=0;
-        while (i < arr.length) {
-            if (arr[i] > max1) {
-                max2 = max1;
-                max1 = arr[i];
-            } else if (arr[i] > max2) {
-                max2 = arr[i];
-            }
-            i++;
+
+    public static int updateMaxValues(int currentValue, int max1, int max2) {
+        if (currentValue > max1) {
+            max2 = max1;
+            max1 = currentValue;
+        } else if (currentValue > max2) {
+            max2 = currentValue;
         }
-        return new  int[] {max1, max2};
+        return max2;
     }
 }

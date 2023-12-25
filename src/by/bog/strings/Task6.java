@@ -35,4 +35,5 @@ public class Task6 {
         }
         return String.valueOf(str);
     }
+
 }
