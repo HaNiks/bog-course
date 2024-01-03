@@ -2,8 +2,7 @@ package by.bog.les1;
 
 import java.util.Scanner;
 
-//интересное название))) camelCase
-public class MInMAx {
+public class MinMAx {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();

@@ -1,4 +1,4 @@
-package by.bog.les2;
+package by.bog.ArrayDemo;
 /* Задача 1
 Создать пустой массив целых чисел.
 В цикле while заполнить этот массив с клавиатуры.
@@ -20,5 +20,9 @@ public class Task1 {
         for (int j = array.length - 1; j >= 0; j--) {
             System.out.print(array[j] + " ");
         }
+
     }
 }
+
+
+

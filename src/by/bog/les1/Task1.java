@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
+
         Random rand = new Random();
         Scanner sc = new Scanner(System.in);
         System.out.println("Число с клавиатуры");
@@ -29,4 +30,3 @@ public class Task1 {
 
     }
 }
-

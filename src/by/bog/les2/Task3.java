@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
         String[] array = new String[7];
         fillArray(array, sc);
@@ -29,7 +28,4 @@ public class Task3 {
         }
     }
 }
-
-
-
 

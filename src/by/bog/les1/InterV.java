@@ -9,7 +9,5 @@ public class InterV {
         boolean includeRange = (sum > -15 && sum <= 12) || (sum > 14 && sum < 17) || (sum >= 19);
         System.out.println(includeRange);
     }
+
 }
-
-
-
