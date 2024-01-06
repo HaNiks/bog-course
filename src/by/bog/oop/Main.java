@@ -3,10 +3,14 @@ package by.bog.oop;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static by.bog.oop.Cat.printCat;
+
 public class Main {
     public static void main(String[] args) {
         Task1();
         Task2();
+        Task3();
+
     }
 
     public static void Task1() {
@@ -27,6 +31,10 @@ public class Main {
         Dog myDog = new Dog(name, age);
         System.out.println(myDog.getName());
         System.out.println(myDog.getAge());
+    }
+    public static void Task3(){
+        Cat myCat = new Cat("Мурзик",4, "Британская");
+        printCat(myCat);
     }
 }
 
